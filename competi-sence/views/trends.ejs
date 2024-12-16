@@ -1,0 +1,37 @@
+<% layout('./layout/page.ejs') %>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/trends.css"> <!-- Подключение CSS -->
+</head>
+<body>
+
+<div class="container">
+    <section id="trends-analysis">
+        <h2>Анализ текущих трендов на 2024 год</h2>
+        <p><h2>На этой странице представлены актуальные тренды, которые ожидаются в 2024 году в бизнесе, технологиях и других сферах.</h2></p>
+
+        <% if (trends && trends.length > 0) { %>
+            <% trends.forEach(function(trend) { %>
+                <div class="trend">
+                    <h3><%= trend.title %></h3>
+                    <p><%= trend.description %></p>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>Не удалось загрузить тренды на 2024 год. Попробуйте обновить страницу позже.</p>
+        <% } %>
+
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Система анализа трендов</p>
+</footer>
+
+</body>
+</html>

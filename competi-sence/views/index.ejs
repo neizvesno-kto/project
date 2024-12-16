@@ -1,0 +1,41 @@
+<% layout('./layout/page.ejs') %>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="/stylesheets/glavnstr.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Добавить бизнес</h1>
+        <form action="/" method="POST">
+            <input type="text" name="companyName" placeholder="Название компании" required title="Введите название вашей компании">
+            
+            <input type="text" name="industry" placeholder="Отрасль" required title="Введите отрасль, в которой работает ваша компания" list="industries">
+            <datalist id="industries">
+                <option value="Торговля">
+                <option value="Услуги">
+                <option value="Производство">
+                <option value="Технологии">
+                <option value="Строительство">
+                <option value="Здравоохранение">
+                <option value="Финансовые услуги">
+                <option value="Образование">
+                <!-- Добавьте другие отрасли по мере необходимости -->
+            </datalist>
+            
+            <!-- Новое поле для описания бизнеса -->
+            <textarea name="discription" placeholder="Краткое описание бизнеса" required title="Введите описание вашего бизнеса" rows="4" maxlength="500"></textarea>
+            
+            <!-- Новое поле для региона -->
+            <textarea name="region" placeholder="Местоположение бизнеса" required title="Введите местоположение вашего бизнеса" rows="2" maxlength="500"></textarea>
+            
+            <button type="submit">Добавить бизнес</button>
+        </form>
+    </div>
+
+</body>
+</html>

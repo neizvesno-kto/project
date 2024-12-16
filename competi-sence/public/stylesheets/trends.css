@@ -1,0 +1,64 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.3), /* Полупрозрачный чёрный слой */
+            rgba(0, 0, 0, 0.3)
+        ),
+        url('/images/background3.png') no-repeat center center fixed;
+    background-size: cover;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+.trend {
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.chart {
+    margin: 20px 0;
+    height: 200px;
+    background: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.generate-report {
+    background: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.generate-report:hover {
+    background: #4cae4c;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}

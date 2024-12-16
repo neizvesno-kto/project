@@ -1,0 +1,44 @@
+/* Основной стиль */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.3), /* Полупрозрачный чёрный слой */
+            rgba(0, 0, 0, 0.3)
+        ),
+        url('/images/welcome.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.welcome-main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Текст заголовка */
+h1 {
+    font-size: 6rem; /* Увеличенный размер текста */
+    margin-bottom: 60px; /* Расстояние до кнопки */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Кнопка */
+button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #0056b3;
+}

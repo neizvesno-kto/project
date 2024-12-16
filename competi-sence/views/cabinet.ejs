@@ -1,0 +1,28 @@
+<% layout('./layout/page.ejs') %>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/cabinet.css">
+</head>
+<body>
+    <main>
+        <section class="profile-info">
+            <h2>Информация о вашем профиле</h2>
+            <p><strong>Имя:</strong> <%= account.username %></p>
+            <p><strong>Номер телефона:</strong> <%= account.phone_number %></p>
+        </section>
+
+        <section class="profile-actions">
+            <h2>Последние действия</h2>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ваша Компания. Все права защищены.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/images/background.png'); /* Путь к вашему фоновому изображению */
+    background-size: cover; /* Заполнение всего фона */
+    background-position: center; /* Центрирование изображения */
+    color: #fff; /* Цвет текста */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Высота на весь экран */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон для читаемости текста */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    resize: vertical; /* Пользователь может изменять высоту */
+    min-height: 100px; /* Минимальная высота текстового поля */
+}
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.company-form {
+    background: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон для формы */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; /* Зеленый цвет кнопки */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838; /* Темнее при наведении */
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+/* Стили для уведомлений */
+.alert {
+    padding: 15px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Стили для основной части страницы */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для формы */
+.company-form {
+    margin-bottom: 20px;
+}
+
+.company-form h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.company-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.company-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для подвала */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+

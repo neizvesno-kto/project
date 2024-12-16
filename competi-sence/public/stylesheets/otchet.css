@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #282c34; /* Темный фон для страницы */
+    color: white; /* Белый цвет для всего текста */
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.3), /* Полупрозрачный чёрный слой */
+            rgba(0, 0, 0, 0.3)
+        ),
+        url('/images/background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: white; /* Заголовок также белый */
+}
+
+/* Стили для списка компаний */
+.company-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.company-item {
+    background-color: #444; /* Темный фон для каждого элемента компании */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-header {
+    margin-bottom: 15px;
+}
+
+.company-name {
+    font-size: 28px;
+    color: white; /* Белый цвет для названия компании */
+    margin: 0;
+}
+
+.industry {
+    font-size: 18px;
+    color: white; /* Белый цвет для отрасли */
+}
+
+.analysis {
+    background-color: #555; /* Более темный фон для анализа */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.analysis h5 {
+    font-size: 18px;
+    margin: 0;
+    color: white; /* Белый цвет для заголовка анализа */
+}
+
+.analysis p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white; /* Белый цвет для текста анализа */
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .company-name {
+        font-size: 24px;
+    }
+
+    .industry {
+        font-size: 16px;
+    }
+
+    .analysis h5 {
+        font-size: 16px;
+    }
+}

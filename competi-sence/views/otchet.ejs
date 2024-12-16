@@ -1,0 +1,34 @@
+<% layout('./layout/page.ejs') %>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/otchet.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><%= title %></h1>
+        </header>
+
+        <section class="report">
+            <ul class="company-list">
+                <% results.forEach(result => { %>
+                    <li class="company-item">
+                        <div class="company-header">
+                            <h2 class="company-name">Компания: <%= result.companyName %></h2>
+                            <p class="industry"><strong>Отрасль:</strong> <%= result.industry %></p>
+                        </div>
+                        <div class="analysis">
+                            <h5><strong>Анализ конкурентов:</strong></h5>
+                            <p><%= result.analysis %></p>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

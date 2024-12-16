@@ -1,0 +1,52 @@
+<% layout('./layout/page.ejs') %>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/competitors.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Список сотрудников</h2>
+
+        <!-- Форма для выбора сортировки -->
+        <div class="sort-options">
+            <form action="/employees" method="get">
+                <label for="sortBy"><h2>Сортировать по:</h2></label>
+                <select id="sortBy" name="sortBy" onchange="this.form.submit()">
+                    <option value="" <% if (sortBy === '') { %>selected<% } %>>По умолчанию</option>
+                    <option value="salary" <% if (sortBy === 'salary') { %>selected<% } %>>Зарплата (по возрастанию)</option>
+                    <option value="company" <% if (sortBy === 'company') { %>selected<% } %>>Компания (по алфавиту)</option>
+                </select>
+            </form>
+        </div>
+
+        <!-- Таблица сотрудников -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Должность</th>
+                    <th>Зарплата</th>
+                    <th>Компания</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% employees.forEach(function(employee) { %>
+                    <tr>
+                        <td><%= employee.name %></td>
+                        <td><%= employee.position %></td>
+                        <td><%= employee.salary %></td>
+                        <td><%= employee.companyName %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+        <a href="/addEmployee" class="btn btn-primary">Добавить сотрудника</a>
+    </div>
+</body>
+</html>

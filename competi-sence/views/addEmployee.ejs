@@ -1,0 +1,45 @@
+<% layout('./layout/page.ejs') %>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/competitors.css">
+</head>
+<body>
+
+<div class="container">
+    <h2><%= title %></h2>
+
+    <form action="/addEmployee" method="post">
+        <div class="form-group">
+            <label for="name"><h2>Имя сотрудника:</h2></label>
+            <input class="form-control" type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+            <label for="position"><h2>Должность:</h2></label>
+            <input class="form-control" type="text" id="position" name="position" required />
+        </div>
+        <div class="form-group">
+            <label for="salary"><h2>Зарплата:</h2></label>
+            <input class="form-control" type="number" id="salary" name="salary" required />
+        </div>
+        <div class="form-group">
+            <label for="business_id"><h2>Компания:</h2></label>
+            <select class="form-control" id="business_id" name="business_id" required>
+                <option value="">Выберите компанию</option>
+                <% businesses.forEach(function(business) { %>
+                    <option value="<%= business.business_id %>"><%= business.companyName %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Добавить сотрудника</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

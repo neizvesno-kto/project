@@ -1,0 +1,40 @@
+<% layout('./layout/page.ejs') %>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ и мониторинг конкурентов</title>
+    <link rel="stylesheet" href="/stylesheets/competitors.css"> <!-- Подключение CSS -->
+</head>
+<body>
+
+<div class="container">
+    <section id="dashboard">
+        <h2>Обзор</h2>
+        <p><h2>Добро пожаловать в систему анализа конкурентов. Выберите для какого бизнеса хотите проанализировать конкурентов.</h2></p>
+    </section>
+
+    <section id="competitors">
+        <h2>Ваши бизнесы</h2>
+        <% businesses.forEach(function(business) { %>
+            <div class="competitor">
+                <h3><%= business.companyName %></h3>
+                <p>Отрасль: <%= business.industry %></p>
+                
+                <!-- Кнопка для перехода на страницу отчета -->
+                <form action="/otchet" method="get">
+                    <button type="submit">Узнать конкурентов и предоставить отчет</button>
+                </form>
+            </div>
+        <% }); %>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Система анализа и мониторинга конкурентов</p>
+</footer>
+
+</body>
+</html>
